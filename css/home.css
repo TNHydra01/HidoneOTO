@@ -1,4 +1,6 @@
-/* home.css — index.html */
+/* ==========================================================
+   home.css -> index.html
+   ========================================================== */
 
 .hero {
   display: grid;
@@ -15,12 +17,12 @@
 
 /* ---------- Top row: eyebrow left, edition right ---------- */
 .hero-top {
-  grid-column: 1 / -1; /* spans both columns of the hero grid */
+  grid-column: 1 / -1;          /* spans both columns of the hero grid */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 0.5rem 1rem;
-  margin-bottom: -1.5rem; /* tightens the gap above the columns */
+  margin-bottom: -1.5rem;       /* tightens the gap above the columns */
 }
 
 .hero-vol {
@@ -190,32 +192,6 @@
 
 .slide-dots button.on {
   background: #fff;
-}
-
-/* ---------- Reveal animations ---------- */
-.js .reveal {
-  opacity: 0;
-  transition:
-    opacity 0.9s ease,
-    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
-  transition-delay: var(--delay, 0s);
-}
-
-.js .reveal.rise      { transform: translateY(40px); }
-.js .reveal.pan-left  { transform: translateX(-70px); }
-.js .reveal.pan-right { transform: translateX(70px); }
-
-.js .reveal.in {
-  opacity: 1;
-  transform: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .js .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
 }
 
 /* ---------- Responsive ---------- */

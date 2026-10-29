@@ -1,7 +1,7 @@
 // English text on the page → Japanese. Keys must match the English exactly.
 const JA = {
   // ----- Header & footer -----
-  'JAPANESE MUSIC': '日本の音楽',
+    'JAPANESE MUSIC': '日本の音楽',
   'BEYOND THE PLAYLIST': 'プレイリストのその先へ',
   'Discover': 'ディスカバー',
   'Artists': 'アーティスト',
@@ -33,12 +33,42 @@ const JA = {
   'IN FOCUS / KEY, STRINGS & VOICE': '注目 / 鍵盤、弦楽器、歌声',
   'IN FOCUS / PASSIONATE & BLENDED': '注目 / パッションとブレンド',
   'IN FOCUS / POWERFUL & THEATRICAL': '注目 / パワフルとサーキット',
+
+  // ----- Artists -----
+  '01 / THE ARTIST INDEX': '01 / アーティスト一覧',
+  'Find your next favorite.': '次のお気に入りを見つけよう。',
+  'All artists': 'すべて',
+  'Bands': 'バンド',
+  'Solo / Duo Artists': 'ソロ / デュオ',
+  'Vocaloids': 'ボカロ',
+  'Anime': 'アニメ',
+  'DUO': 'デュオ',
+  'BAND': 'バンド',
+  'SOLO': 'ソロ',
+  'ANIME': 'アニメ',
+  'VOCALOID': 'ボーカロイド',
+  'Kessoku Band': '結束バンド',
+  'Yorushika': 'ヨルシカ',
+  'ikura / Vocals': 'ikura / ボーカル',
+  'Ayase / Composition, Production, Keyboard': 'Ayase / 作曲・プロデュース・キーボード',
+  'Vocals / Piano / Guitar': 'ボーカル / ピアノ / ギター',
+  'Bass / Drums': 'ベース / ドラム',
+  'Vocals / Keyboard / Guitar': 'ボーカル / キーボード / ギター',
+  'Vocals / Songwriting / Production': 'ボーカル / 作詞作曲 / プロデュース',
+  'An artist-led approach on making pop': 'アーティスト主導のポップスづくり',
+  'Vocals / Guitar': 'ボーカル / ギター',
+  'Vocaloid / Songwriting / Production': 'ボーカロイド / 作詞作曲 / プロデュース',
+  'Vocaloid software genius and producer': 'ボーカロイドソフトの天才プロデューサー',
+  'n-buna / Guitar / Composition / Production': 'n-buna / ギター / 作曲 / プロデュース',
+  'suis / Vocals': 'suis / ボーカル',
+  'Vocals / Vocaloid': 'ボーカル / ボーカロイド',
+  'The closet-otaku-turned-global-superstar': '隠れオタクから世界的スターへ',
 };
 
 // Text with a changing part, like “Start with “Song” ↗”
-const PATTERNS = [[/^Start with “(.+)” ↗$/, '「$1」から聴く ↗']];
+const PATTERNS = [[/^Start with “(.+)” ↗$/, '[$1] から聴く ↗']];
 
-const originals = new WeakMap();                 // text node → its English text
+const originals = new WeakMap(); // text node → its English text
 const clean = (s) => s.replace(/\s+/g, ' ').trim();
 
 function toJapanese(english) {

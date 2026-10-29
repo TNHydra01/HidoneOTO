@@ -1,0 +1,159 @@
+/*
+   ==========================================================
+   artist.css -> artist.html
+   ==========================================================
+*/
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* ---------- Filter buttons ---------- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+.filters button {
+  padding: 0.55rem 1.2rem;
+  border: 1.5px solid var(--ink);
+  background: none;
+  font: inherit;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.filters button.on {
+  border-color: #6c6c64;
+  background: #6c6c64;
+  color: #fff;
+}
+
+/* ---------- Artist grid ---------- */
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+
+/* ---------- Arrows ---------- */
+.browser {
+  display: grid;
+  grid-template-columns: 64px 1fr 64px;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.page-btn {
+  width: 64px;
+  height: 64px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--sand);
+  color: var(--ink);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: var(--red);
+  color: #fff;
+}
+
+.page-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.page-count {
+  margin-top: 1.5rem;
+  color: var(--grey);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0 0.2rem;
+  font-size: 0.65rem;
+}
+
+.card-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.card-link img {
+  transition: transform 0.5s ease;
+}
+
+.card-link:hover img {
+  transform: scale(1.05);
+}
+
+.card h3 a:hover {
+  color: var(--red);
+}
+
+.tiny {
+  color: var(--grey);
+  font-size: 0.62rem;
+}
+
+.start {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .grid4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .browser {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid4 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  /* arrows drop below the grid on phones */
+  .page-btn.prev { grid-column: 1; grid-row: 2; justify-self: start; }
+  .page-btn.next { grid-column: 2; grid-row: 2; justify-self: end; }
+}
+
+@media (max-width: 520px) {
+  .grid4 { grid-template-columns: 1fr; }
+}

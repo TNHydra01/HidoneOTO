@@ -11,7 +11,7 @@ const observer = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in'); // starts the transition
-        obs.unobserve(entry.target);      // animate once only
+        obs.unobserve(entry.target); // animate once only
       }
     });
   },
