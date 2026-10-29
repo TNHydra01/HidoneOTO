@@ -1,0 +1,226 @@
+/* home.css — index.html */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 2.5rem var(--gutter) 0;
+}
+
+.hero h1 {
+  margin: 1rem 0 1.6rem;
+  font-size: clamp(3rem, 6.2vw, 5.6rem);
+}
+
+/* ---------- Top row: eyebrow left, edition right ---------- */
+.hero-top {
+  grid-column: 1 / -1; /* spans both columns of the hero grid */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: -1.5rem; /* tightens the gap above the columns */
+}
+
+.hero-vol {
+  color: var(--grey);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.lede {
+  max-width: 34ch;
+  margin-bottom: 2rem;
+  color: var(--grey);
+  font-size: 1.05rem;
+}
+
+/* ---------- Buttons ---------- */
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.9rem 1.4rem;
+  border: 2px solid var(--ink);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: transform 0.15s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.red {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}
+
+/* ---------- Hero image panel ---------- */
+.hero-img {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #161616;
+}
+
+.badge {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  font-size: 0.6rem;
+}
+
+.badge b {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* ---------- Hero slideshow ---------- */
+.slides {
+  position: relative;
+  aspect-ratio: 3 / 2;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.9s ease, visibility 0.9s;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide img,
+.slide .ph {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+/* Slow zoom-out while a slide is showing */
+.slide img {
+  transform: scale(1.06);
+  transition: transform 6s ease-out;
+}
+
+.slide.active img {
+  transform: scale(1);
+}
+
+/* Dark fade at the bottom so the caption stays readable */
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent 45%);
+  pointer-events: none;
+}
+
+/* Caption rises in just after the image fades in */
+.slide-caption {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 2rem;
+  z-index: 2;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.slide.active .slide-caption {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.35s;
+}
+
+.slide-caption small {
+  display: block;
+  font-size: 0.85rem;
+}
+
+.slide-caption strong {
+  font-size: 1.5rem;
+}
+
+/* Dots */
+.slide-dots {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.8rem;
+  z-index: 3;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slide-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.slide-dots button.on {
+  background: #fff;
+}
+
+/* ---------- Reveal animations ---------- */
+.js .reveal {
+  opacity: 0;
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--delay, 0s);
+}
+
+.js .reveal.rise      { transform: translateY(40px); }
+.js .reveal.pan-left  { transform: translateX(-70px); }
+.js .reveal.pan-right { transform: translateX(70px); }
+
+.js .reveal.in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
