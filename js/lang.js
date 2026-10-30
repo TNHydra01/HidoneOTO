@@ -63,6 +63,25 @@ const JA = {
   'suis / Vocals': 'suis / ボーカル',
   'Vocals / Vocaloid': 'ボーカル / ボーカロイド',
   'The closet-otaku-turned-global-superstar': '隠れオタクから世界的スターへ',
+
+    // ----- Instruments -----
+  '02 / FIND YOUR FREQUENCY': '02 / 自分の周波数を見つけよう',
+  'Follow the instrument.': '楽器をたどろう。',
+  'Voice': '声',
+  'Guitar': 'ギター',
+  'Drums': 'ドラム',
+  'Piano & Keys': 'ピアノ・キーボード',
+  'Bass': 'ベース',
+  'Production': 'プロダクション',
+  'The melody, the words, the character.': 'メロディ、言葉、そして個性。',
+  'From delicate picking to bright riffs': '繊細なピッキングから華やかなリフまで',
+  'The heartbeat in every chorus': 'サビごとに響く鼓動',
+  'Harmony, hooks and new textures.': 'ハーモニー、フック、新しい質感。',
+  'The low end that glues it all together': 'すべてをつなぎ合わせる低音',
+  'Arrangement, sound design and mix': 'アレンジ、サウンドデザイン、ミックス',
+  'PERFORMANCE ↗': 'パフォーマンス ↗',
+  'INSTRUMENT ↗': '楽器 ↗',
+  'CREATIVE ROLE ↗': 'クリエイティブな役割 ↗',
 };
 
 // Text with a changing part, like “Start with “Song” ↗”
