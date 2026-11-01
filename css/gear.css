@@ -1,0 +1,254 @@
+/* ==========================================================
+   gear.css — gear.html
+   ========================================================== */
+
+/* ---------- Band member grid: 2 x 2 ---------- */
+.gear-page {
+  padding-inline: 10%;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.2rem clamp(2rem, 8vw, 7rem);
+}
+
+.gear {
+  --img: clamp(170px, 16vw, 232px);   /* image width */
+
+  display: grid;
+  grid-template-columns: var(--img) 1fr;   /* image, then text */
+  align-items: start;
+  gap: 2.8rem;
+  padding-left: 1.5rem;
+  border-left: 1.5px solid var(--line);
+}
+
+/* bottom row: text first, image second */
+.gear.flip {
+  grid-template-columns: 1fr var(--img);
+}
+
+.gear.flip .gear-img {
+  order: 2;
+}
+
+.gear-img {
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.gear-body h3 {
+  font-family: var(--body);
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.gear-body .model {
+  margin: 0.9rem 0 0.8rem;
+  font-size: 0.9rem;
+  padding-bottom: 0.5rem;
+}
+
+.gear-body .desc {
+  margin-bottom: 1rem;
+  color: var(--grey);
+  font-size: 0.72rem;
+  line-height: 1.3;
+  text-align: justify;
+  padding-bottom: 0.5rem;
+}
+.actions {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+}
+
+/* ---------- Amps & pedals overlay (CSS-only, opened via #amps) ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: none;
+  overflow: auto;
+  padding: 8rem 3% 2rem;
+  background: rgba(244, 240, 232, 0.85);
+}
+
+.modal-close {
+  position: absolute;
+  inset: 0;
+  cursor: default;
+}
+
+.modal:target {
+  display: block;
+}
+
+.sheet {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 1.5rem 3rem 3rem;
+  border-radius: 6px;
+  background: var(--sand);
+  position: relative;   /* sits above the click-to-close backdrop */
+}
+
+.sheet-who {
+  margin-top: 1rem;
+}
+
+.back {
+  font-size: 0.95rem;
+}
+
+body:has(.modal:target) {
+  overflow: hidden;
+}
+
+/* ---------- Overlay layout: two columns with a divider ---------- */
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
+}
+
+.cols > div:first-child {
+  padding-right: 2.5rem;
+  border-right: 1.5px solid var(--line);
+}
+
+.cols > div:last-child {
+  padding-left: 2.5rem;
+}
+
+.cols h2, .misc-wrap h2 {
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+}
+
+.misc-wrap {
+  margin-top: 2rem;
+}
+
+/* Every group (misc, pedals) is a 2-column grid of items */
+.misc, .pedals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem 1.2rem;
+}
+
+/* ---------- Item: image left, text right ---------- */
+.item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: start;
+  gap: 0.9rem;
+  margin: 0;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  padding: 0.3rem;
+  background: #fff;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.item h4 {
+  font-family: var(--display);
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.item .model {
+  margin: 0.3rem 0;
+  font-size: 0.78rem;
+}
+
+.item .muted {
+  margin-bottom: 0.4rem;
+  color: #222;
+  font-size: 0.62rem;
+  line-height: 1.3;
+  text-align: justify;
+}
+
+/* ---------- Pedals: stacked cards, slightly smaller ---------- */
+.pedals .item {
+  grid-template-columns: 1fr;   /* image above text */
+  gap: 0.7rem;
+}
+
+.pedals .item img {
+  width: 130px;
+  height: 130px;
+  padding: 0.4rem;
+}
+
+.pedals .item h4 {
+  font-size: 1.05rem;
+}
+
+.pedals .item .model {
+  font-size: 0.8rem;
+}
+
+.pedals .item .muted {
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .cols {
+    grid-template-columns: 1fr;
+  }
+
+  .cols > div:first-child {
+    padding-right: 0;
+    border-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .cols > div:last-child {
+    padding-left: 0;
+  }
+
+  .sheet {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .misc,
+  .pedals {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .gear-page {
+    padding-inline: var(--gutter);
+  }
+
+  .gear,
+  .gear.flip {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .gear.flip .gear-img {
+    order: 0;   /* image back on top on phones */
+  }
+}

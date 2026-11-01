@@ -82,6 +82,84 @@ const JA = {
   'PERFORMANCE ↗': 'パフォーマンス ↗',
   'INSTRUMENT ↗': '楽器 ↗',
   'CREATIVE ROLE ↗': 'クリエイティブな役割 ↗',
+
+  // ----- Gear -----
+  '02 / TOOLS OF MUSIC': '02 / 音楽の道具',
+  'Hitori Gotoh': '後藤ひとり',
+  'Ikuyo Kita': '喜多郁代',
+  'Ryo Yamada': '山田リョウ',
+  'Nijika Ijichi': '伊地知虹夏',
+  'The socially anxious lead guitar in many Kessoku Band songs like “Guitar, Loneliness, and Blue Planet” and “seisyun complex”.':
+  '[Guitar, Loneliness, and Blue Planet]や[seisyun complex]など、結束バンドの多くの曲を支える人見知りのリードギター。',
+  'The quick-learner, main singer, and rhythm guitar in all of the songs like “Flashbacker” and “Karakara”.':
+  '[Flashbacker]や[Karakara]など、多くの曲でメインボーカルとリズムギターを務める飲み込みの早い努力家。',
+  'Broke but funky and catchy bass riffs in songs like “That Band” and “If I could be a constellation”.':
+  '金欠だけどファンキーでキャッチーなベースライン。[That Band]や[If I could be a constellation]で聴ける。',
+  'The heartbeat of the band by giving a high-energy and disco type beat in every song like “Into the Light” and “Never forget”.':
+  '[Into the Light]や[Never forget]など、ハイエネルギーでディスコ調のビートを刻むバンドの鼓動。',
+  'Other Gear Info ↗': '他の機材情報 ↗',
+  'Buy Now ↗': '購入する ↗',
+  '← Back to page': '← ページに戻る',
+  'Amplifiers': 'アンプ',
+  'Effects Pedals': 'エフェクターペダル',
+  'Live Venue Amp': 'ライブ会場用アンプ',
+  'Practice Home Amp': '自宅練習用アンプ',
+  'This high-gain British tube amp stack is a staple of classic rock and punk tones, giving her Gibson Les Paul Custom its thick, punchy overdrive.':
+  'ハイゲインなブリティッシュ・チューブアンプのスタック。クラシックロックやパンクの定番サウンドで、彼女のGibson Les Paul Customに太くパンチのあるオーバードライブを与える。',
+  'This is a compact, portable 5-watt desktop modeling amplifier known for delivering tube-like tones at low volumes.':
+  '小音量でも真空管のようなトーンが得られることで知られる、コンパクトで持ち運びやすい5ワットのデスクトップ・モデリングアンプ。',
+  'Overdrive Pedal': 'オーバードライブ',
+  'Wah Pedal': 'ワウペダル',
+  'Distortion Pedal': 'ディストーション',
+  'Multi-Effects Pedal': 'マルチエフェクター',
+  'Live Venue Amp Head': 'ライブ会場用アンプヘッド',
+  'Live Venue Cabinet': 'ライブ会場用キャビネット',
+  'Headphones': 'ヘッドホン',
+  'Bass D.I.': 'ベースD.I.',
+  'Practice Amp': '練習用アンプ',
+  'Sticks': 'スティック',
+  'Snare': 'スネア',
+  "This is Bocchi's main overdrive pedal. It provides a crisp, touch-sensitive crunch. Activated on her solo to the song “That Band”.":
+  'ぼっちのメインのオーバードライブ。タッチに敏感で歯切れのよいクランチを生む。[That Band]のソロで使用。',
+  'Bocchi uses a standard Dunlop Cry Baby wah pedal. This is most prominent during her climactic bottleneck slide guitar solo in “Never Forget”.':
+  'ぼっちは定番のDunlop Cry Babyワウを使用。[Never Forget]のクライマックスのボトルネック・スライドギターソロで特に際立つ。',
+  "When Kessoku Band's music requires heavier, aggressive, and more saturated tones, Bocchi engages her ProCo RAT 2.":
+  '結束バンドの曲でより重く攻撃的で歪んだ音が必要なとき、ぼっちはProCo RAT 2を踏む。',
+  'The brain of her pedalboard is a BOSS MS-3. This unit acts as both a loop switcher, allowing her to instantly switch pedal combinations with one stomp.':
+  'ペダルボードの司令塔はBOSS MS-3。ループスイッチャーとして、ひと踏みでペダルの組み合わせを瞬時に切り替えられる。',
+  'Miscellaneous': 'その他の小物',
+  'Picks': 'ピック',
+  'Cables': 'ケーブル',
+  'Strap': 'ストラップ',
+  'Tuner': 'チューナー',
+  'HITORI GOTOH / GEAR': '後藤ひとり / 機材',
+  'IKUYO KITA / GEAR': '喜多郁代 / 機材',
+  'RYO YAMADA / GEAR': '山田リョウ / 機材',
+  'NIJIKA IJICHI / GEAR': '伊地知虹夏 / 機材',
+  'This is a high-gain British tube amp stack that is a staple of classic rock and punk tones, giving her Gibson Les Paul Custom its thick, punchy overdrive.':
+  'ハイゲインなブリティッシュ・チューブアンプのスタック。クラシックロックやパンクの定番サウンドで、彼女のGibson Les Paul Customに太くパンチのあるオーバードライブを与える。',
+  'This is a compact, portable 5-watt desktop modeling amplifier known for delivering tube-like tones at low volumes.':
+  '小音量でも真空管のようなトーンが得られることで知られる、コンパクトで持ち運びやすい5ワットのデスクトップ・モデリングアンプ。',
+  'The large, oversized triangle shape provides a massive surface area to grip.': '大きくオーバーサイズの三角形の形状は、握るための広大な表面積を提供する。',
+  'She uses traditional, heavy-duty black Boss BIC to run from her guitar to her board, and from her board to her Marshall or Yamaha amp.': 'ギターからボードまで、ボードからMarshallやYamahaのアンプまで、伝統的で頑丈な黒いBoss BICを使用している。',
+  'The Fender strap features a wide, durable woven construction with a monogrammed pattern.': 'Fenderのストラップは、モノグラムパターンの幅広く耐久性のある織り構造を特徴としている。',
+  'This is her go-to tool during her bedroom practice sessions and right before band kicks off a studio rehearsal.':
+  'これは、彼女の自宅練習セッションや、バンドがスタジオリハーサルを始める直前に使用する定番のツールである。',
+  'A high-gain British tube amp stack that gives Kita\'s Gibson Les Paul Jr. a bright, punchy rock crunch on stage.':'ハイゲインなブリティッシュ・チューブアンプのスタック。喜多のGibson Les Paul Jr.に、ステージ上で明るくパンチのあるロッククランチを与える。',
+  'A compact 5-watt desktop modeling amp with tube-like tones at low volumes, borrowed from Hitori.':'小音量でも真空管のようなトーンが得られる、ぼっちから借りたコンパクトで持ち運びやすい5ワットのデスクトップ・モデリングアンプ。',
+  'A large triangle shape with plenty of surface to grip.':'握るための広い表面を持つ大きな三角形の形状。',
+  'Heavy-duty cable from guitar to board and from board to amp.':'ギターからボードまで、ボードからアンプまでの頑丈なケーブル。',
+  'A floral-patterned strap that suits her bright, flashy stage presence.':'明るく派手なステージの存在感に合う花柄のストラップ。',
+  'A polyphonic tuner and buffer for quick checks at practice and right before the set.':'練習中や本番前の素早いチェックのためのポリフォニックチューナーとバッファー。',
+  'A crisp, touch-sensitive overdrive for Kita\'s rhythm tones.':'クリスプでタッチセンシティブなオーバードライブ、喜多のリズムトーンに最適。',
+  'Heavier, more saturated tone when Kessoku Band\'s songs need it.' : '結束バンドの曲でより重く攻撃的で歪んだ音が必要なとき。',
+  'The classic all-tube bass head, the sound behind Ryo\'s thick low end on stage.' : 'クラシックなオールチューブのベースヘッド。ステージ上でリョウの厚い低音を支えるサウンド。',
+  'Studio monitor headphones for listening critically and writing.' : '批評的に聴き、作曲するためのスタジオモニターヘッドホン。',
+  'Heavy-duty cable from bass to board and board to amp.' : 'ベースからボードまで、ボードからアンプまでの頑丈なケーブル。',
+  'A floral-patterned strap that fits her cool, quirky look.' : '彼女のクールで風変わりなルックスに合う花柄のストラップ。',
+  'The core preamp and direct injection (D.I.) pedal featured in the official guidebook and anime art book.':'公式ガイドブックとアニメアートブックに掲載されているコアプリアンプとダイレクトインジェクション（D.I.）ペダル。',
+  'They are thinner and lighter than standard sticks, offering quick, nimble responses and making them incredible for precise cymbal work and controlled playing.':'標準的なスティックよりも細く軽量で、素早く機敏な反応を提供し、正確なシンバルワークとコントロールされた演奏に最適。',
+  'The bright, sharp, and high-volume "crack" needed to cut through complex arrangements.':'複雑なアレンジを切り抜けるために必要な明るく鋭く高音量の「クラッ」とした音。'
 };
 
 // Text with a changing part, like “Start with “Song” ↗”
